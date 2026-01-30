@@ -40,8 +40,9 @@ class TerrainGenerator:
         
         for freq, amp in zip(frequencies, amplitudes):
             # Generate random grid
-            grid_h = max(2, self.height // (int(scale / freq)))
-            grid_w = max(2, self.width // (int(scale / freq)))
+            divisor = max(1, int(scale / freq))
+            grid_h = max(2, self.height // divisor)
+            grid_w = max(2, self.width // divisor)
             
             small_noise = self.rng.rand(grid_h, grid_w).astype(np.float32)
             

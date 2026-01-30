@@ -68,8 +68,9 @@ class ImageDegradationEstimator:
         Method: Apply high-pass filter and compute MAD of result.
         Assumes noise is independent high-frequency content.
         """
-        # High-pass filter using Laplacian
-        laplacian = cv2.Laplacian(image, cv2.CV_64F, ksize=3)
+        # Convert to uint8 for Laplacian, then back to float
+        image_uint8 = (image * 255).astype(np.uint8)
+        laplacian = cv2.Laplacian(image_uint8, cv2.CV_64F, ksize=3)
         
         # Compute MAD (robust to outliers)
         median = np.median(laplacian)

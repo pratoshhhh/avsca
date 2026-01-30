@@ -86,7 +86,7 @@ KNOWN FAILURE MODES AND LIMITATIONS:
 
 if __name__ == "__main__":
     # Example usage
-    VIDEO_PATH = "path/to/your/aerial_video.mp4"  # Change this!
+    VIDEO_PATH = "test_aerial.mp4"  # Synthetic test video
     
     # Run pipeline
     results = run_anomaly_detection_pipeline(
