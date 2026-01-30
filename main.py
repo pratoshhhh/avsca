@@ -86,13 +86,13 @@ KNOWN FAILURE MODES AND LIMITATIONS:
 
 if __name__ == "__main__":
     # Example usage
-    VIDEO_PATH = "test_aerial.mp4"  # Synthetic test video
+    VIDEO_PATH = "real_aerial_video.mp4"  # Real aerial footage from YouTube
     
     # Run pipeline
     results = run_anomaly_detection_pipeline(
         video_path=VIDEO_PATH,
-        max_frames=100,
-        output_path='anomaly_detection_output.mp4'
+        max_frames=150,
+        output_path='real_video_anomaly_output.mp4'
     )
     
     print("\nPipeline complete!")

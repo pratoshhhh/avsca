@@ -1,0 +1,39 @@
+{
+  "terrain_type": "urban",
+  "motion_type": "sweep",
+  "motion_velocity": [
+    2.0,
+    1.0
+  ],
+  "rotation_velocity": 0.1,
+  "zoom_velocity": 0.0,
+  "turbulence": 2.0,
+  "num_anomalies": 5,
+  "anomaly_types": [
+    "drone",
+    "aircraft",
+    "missile",
+    "bird"
+  ],
+  "anomaly_speed": 1.5,
+  "anomaly_size_range": [
+    15,
+    40
+  ],
+  "texture_scale": 1.0,
+  "terrain_contrast": 1.0,
+  "video_settings": {
+    "width": 640,
+    "height": 480,
+    "fps": 30.0,
+    "num_frames": 120,
+    "noise_level": 0.03,
+    "noise_type": "gaussian",
+    "blur_amount": 0.8,
+    "blur_type": "motion",
+    "vignette": 0.3,
+    "compression_quality": 70,
+    "brightness": 0.0,
+    "contrast": 1.0
+  }
+}
