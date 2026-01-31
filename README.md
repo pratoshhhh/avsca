@@ -329,46 +329,6 @@ results = run_anomaly_detection_pipeline(
 )
 ```
 
-### Component-Level Configuration
-
-```python
-# Motion estimation
-BackgroundMotionEstimator(model_type='affine')  # or 'homography'
-
-# Motion consistency
-MotionConsistencyChecker(threshold_sigma=3.0, min_area=100)
-
-# Scale analysis
-ScaleSpaceConsistencyAnalyzer(num_scales=4, sigma_base=1.0)
-
-# Temporal analysis
-TemporalConsistencyAnalyzer(window_size=5, min_persistence=0.4)
-
-# Degradation checking
-PhysicalDegradationChecker(tolerance_sigma=2.0)
-
-# Fusion weights
-AnomalyFusionEngine(
-    motion_weight=0.3,
-    scale_weight=0.25,
-    temporal_weight=0.3,
-    degradation_weight=0.15
-)
-```
-
-## Known Limitations
-
-1. **Extreme Motion Blur**: Reduces optical flow accuracy
-2. **Low Contrast/Poor Lighting**: Degrades gradient-based stages
-3. **Rapid Camera Rotation**: May need homography model instead of affine
-4. **Repeating Textures**: Optical flow may fail
-5. **Compression Artifacts**: Can introduce false anomalies
-6. **Computational Cost**: Dense optical flow is O(N×W×H) per frame pair
-
-## License
-
-Defense-Oriented Computer Vision Lab, January 2026
-
 ## Contributing
 
 Contributions welcome! Please ensure code follows the existing style and includes appropriate documentation.

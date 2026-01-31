@@ -76,7 +76,6 @@ KNOWN FAILURE MODES AND LIMITATIONS:
 
 10. **Computational Complexity**
     - Dense optical flow is expensive (O(N*W*H) per frame pair)
-    - Mitigation: GPU acceleration, sparse feature tracking, or downsample input
 """
 
 
