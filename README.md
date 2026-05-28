@@ -37,10 +37,6 @@ This pipeline detects anomalies in airborne imagery (from jets, UAVs, drones) us
 
 1. **Clone or navigate to the project directory:**
 
-```bash
-cd /home/pratosh/Desktop/Desktop/programming/code/avsca
-```
-
 2. **Create a virtual environment (recommended):**
 
 ```bash
